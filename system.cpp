@@ -1,7 +1,9 @@
 #include <fstream>
-//HINT: COMPLETE THE INCLUDE STATEMENT
+#include "system.h"
+#include "disk.h"
+//HINT: COMPLETE THE INCLUDE STATEMENT - done 
 
-System::System(int N, double displacement,double radius, double boxSize, int seed) {
+System System(int N, double displacement,double radius, double boxSize, int seed) {
 
         this->boxSize= boxSize;
         this->  dist = std::uniform_real_distribution<double>(0, 1);
