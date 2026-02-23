@@ -14,22 +14,22 @@
 
 class System {
 public:
-std::vector<Disk> disks;
-double BoxSize;
-double displacement;
-std::mt19937 gen;
-std::uniform_real_distribution<> dist;
+    std::vector<Disk> disks;
+    double BoxSize;
+    double displacement;
+    std::mt19937 gen;
+    std::uniform_real_distribution<> dist;
 
-System(int N, double displacement, double radius, double box_size, int seed) ;
+    System(int N, double displacement, double radius, double box_size, int seed) ;
 
-void step() ;
+    void step() ;
 
-void save(const std::string &filename) ;
+    void save(const std::string &filename) ;
 
-bool overlap(int i) ;
+    bool overlap(int i) ;
 
-void enforceBoundaries(Disk &disk) ;
-double uniform(double min, double max) ;
+    void enforceBoundaries(Disk &disk) ;
+    double uniform(double min, double max) ;
 };
 #endif // !SYSTEM_H
 
