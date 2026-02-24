@@ -3,9 +3,9 @@
 #include "disk.h"
 //HINT: COMPLETE THE INCLUDE STATEMENT - done 
 
-System System(int N, double displacement,double radius, double boxSize, int seed) {
+System::System(int N, double displacement,double radius, double boxSize, int seed) {
 
-        this->boxSize= boxSize;
+        this->BoxSize= boxSize;
         this->  dist = std::uniform_real_distribution<double>(0, 1);
         this->displacement=displacement;
         gen = std::mt19937(seed);
@@ -49,9 +49,9 @@ void System::step() {
 }
 void System::enforceBoundaries(Disk & disk) {
         if (disk.x < 0) disk.x = 0;
-        if (disk.x > boxSize) disk.x = boxSize;
+        if (disk.x > BoxSize) disk.x = BoxSize;
         if (disk.y < 0) disk.y = 0;
-        if (disk.y > boxSize) disk.y = boxSize;
+        if (disk.y > BoxSize) disk.y = BoxSize;
     }
 
 // HINT: PROVIDE A DEFINITION FOR A MEMBER FUNCTION OF THE SYSTEM CLASS CALLED uniform - done
