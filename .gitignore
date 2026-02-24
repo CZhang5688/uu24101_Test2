@@ -1,0 +1,15 @@
+# ignoring confs folder or any of its contents
+confs/
+**/confs/
+
+# ignoring the executables produced from the compliation of the code
+*.out
+*.o
+*.exe
+*.app
+*.dSYM/
+
+# ignoring the build folder (where executables and object files could 
+# pontentially be created and stored)
+build/
+cmake-build-*/  
